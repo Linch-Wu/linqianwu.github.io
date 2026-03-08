@@ -15,7 +15,7 @@
 <body>
 
     <div class="container">
-        <header>
+               <header>
             <div class="header-content">
                 <div>
                     <h1>[Your Name]</h1>
@@ -24,10 +24,27 @@
                 
                 <div class="braid-container">
                     <svg class="braid-svg" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-                        <path class="strand strand-1" d="M 0 15 C 25 15, 25 45, 50 45 C 75 45, 75 15, 100 15" />
-                        <path class="strand strand-2" d="M 0 45 C 25 45, 25 15, 50 15 C 75 15, 75 45, 100 45" />
-                        <circle class="particle p1" cx="0" cy="15" r="3" />
-                        <circle class="particle p2" cx="0" cy="45" r="3" />
+                        
+                        <defs>
+                            <path id="worldline-1" d="M 0 15 C 30 15, 30 45, 50 45 C 70 45, 70 15, 100 15" />
+                            <path id="worldline-2" d="M 0 45 C 30 45, 30 15, 50 15 C 70 15, 70 45, 100 45" />
+                        </defs>
+
+                        <use href="#worldline-1" class="strand strand-1" />
+                        <use href="#worldline-2" class="strand strand-2" />
+
+                        <circle class="particle p1" r="3">
+                            <animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.4;0.6;1" calcMode="linear">
+                                <mpath href="#worldline-1" />
+                            </animateMotion>
+                        </circle>
+
+                        <circle class="particle p2" r="3">
+                            <animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.4;0.6;1" calcMode="linear">
+                                <mpath href="#worldline-2" />
+                            </animateMotion>
+                        </circle>
+                        
                     </svg>
                 </div>
             </div>
@@ -39,6 +56,7 @@
                 <a href="#notes">Notes</a>
             </nav>
         </header>
+
 
         <section id="about">
             <p>I am a physicist working on the formal structures underlying topological phases of matter. My research focuses on using category theory and topological quantum field theory (TQFT) to understand topological orders and explore architectures for topological quantum computation.</p>
