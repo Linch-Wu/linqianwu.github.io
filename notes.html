@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>[Your Name]</h1>
+                    <div class="subtitle">PhD Candidate in Theoretical Physics @ Perimeter Institute</div>
+                </div>
+                
+                <div class="braid-container">
+                    <svg class="braid-svg" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <path id="worldline-1" d="M 0 15 C 30 15, 30 45, 50 45 C 70 45, 70 15, 100 15" />
+                            <path id="worldline-2" d="M 0 45 C 30 45, 30 15, 50 15 C 70 15, 70 45, 100 45" />
+                        </defs>
+                        <use href="#worldline-1" class="strand strand-1" />
+                        <use href="#worldline-2" class="strand strand-2" />
+                        <circle class="particle p1" r="3">
+                            <animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.4;0.6;1" calcMode="linear">
+                                <mpath href="#worldline-1" />
+                            </animateMotion>
+                        </circle>
+                        <circle class="particle p2" r="3">
+                            <animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.4;0.6;1" calcMode="linear">
+                                <mpath href="#worldline-2" />
+                            </animateMotion>
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="notes.html" class="active">Notes</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="talks-and-slides">
+                <h2>Talks & Slides</h2>
+                <p>Slides from various seminars, reading groups, and conferences.</p>
+                <ul>
+                    <li>
+                        <span class="paper-title">String Diagrams for Physicists</span>
+                        <span class="paper-authors">Perimeter Institute Quantum Info Seminar, Fall 2025. <a href="#">[Slides PDF]</a></span>
+                    </li>
+                    <li>
+                        <span class="paper-title">What is a TQFT anyway?</span>
+                        <span class="paper-authors">Graduate Student Seminar, Spring 2025. <a href="#">[Slides PDF]</a></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="expository-notes">
+                <h2>Expository Notes</h2>
+                <p>Rough notes and pedagogical write-ups. Use at your own risk; typos likely.</p>
+                <ul>
+                    <li><a href="#">An Introduction to Modular Tensor Categories (PDF)</a></li>
+                    <li><a href="#">Notes on the Toric Code and Anyon Condensation (PDF)</a></li>
+                    <li><a href="#">A Quick Cheat Sheet for Category Theory (PDF)</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
