@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Theoretical Physics</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #e5e7eb;
+            --accent-color: #7dd3fc; /* Quantum blue */
+            --accent-purple: #c084fc;
+            --font-main: 'Inter', sans-serif;
+            --font-mono: 'Fira Code', monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 4rem 2rem;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-mono);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-purple);
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: ">> ";
+            color: #475569;
+            margin-right: 10px;
+        }
+
+        .subtitle {
+            font-family: var(--font-mono);
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--bg-color);
+            background-color: var(--accent-color);
+        }
+
+        .nav-links {
+            margin-top: 1.5rem;
+            font-family: var(--font-mono);
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "⊗";
+            position: absolute;
+            left: 0;
+            color: var(--accent-purple);
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            display: block;
+        }
+
+        .paper-authors {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        .math-hero {
+            background: #1e293b;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.2rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>[Your Name]</h1>
+            <div class="subtitle">PhD Candidate in Theoretical Physics @ Perimeter Institute</div>
+            
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#notes">Notes</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <p>I am a physicist working on the formal structures underlying topological phases of matter. My research focuses on using category theory and topological quantum field theory (TQFT) to understand topological orders and explore architectures for topological quantum computation.</p>
+            
+            <div class="math-hero">
+                $$ Z(\Sigma \times S^1) = \dim(\mathcal{H}_\Sigma) $$
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li><strong>Topological Orders:</strong> Classifying fractionalized phases using tensor categories and anyon condensation.</li>
+                <li><strong>Category Theory:</strong> Applying monoidal categories and string diagrammatic calculus to physical systems.</li>
+                <li><strong>Topological Quantum Computation:</strong> Braid group representations, surface codes, and fault-tolerant logical gates. </li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>
+                    <span class="paper-title"><a href="#">A Categorical Framework for Anyon Braiding</a></span>
+                    <span class="paper-authors">Your Name, Collaborator Name. <em>arXiv:2603.XXXXX</em> (2026)</span>
+                </li>
+                <li>
+                    <span class="paper-title"><a href="#">Pants Decompositions in 2+1D TQFTs</a></span>
+                    <span class="paper-authors">Your Name. <em>Journal of High Energy Physics</em> (2025)</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="notes">
+            <h2>Talks & Notes</h2>
+            <p>I occasionally write up notes on formal theory and category theory. Here are a few recent ones:</p>
+            <ul>
+                <li><a href="#">An Introduction to Modular Tensor Categories (PDF)</a></li>
+                <li><a href="#">String Diagrams for Physicists (Slides)</a></li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
