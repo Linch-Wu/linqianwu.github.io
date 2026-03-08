@@ -86,16 +86,6 @@ h1 {
 .p1 { stroke: var(--accent-color); animation: moveParticle1 6s infinite ease-in-out; }
 .p2 { stroke: var(--accent-purple); animation: moveParticle2 6s infinite ease-in-out; }
 
-/* Animations for the braiding particles moving along the paths */
-@keyframes moveParticle1 {
-    0%, 100% { cx: 0; cy: 15; }
-    50% { cx: 100; cy: 15; }
-}
-
-@keyframes moveParticle2 {
-    0%, 100% { cx: 0; cy: 45; }
-    50% { cx: 100; cy: 45; }
-}
 
 /* === General Typography & Layout === */
 
