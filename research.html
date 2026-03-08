@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Research</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>[Your Name]</h1>
+                    <div class="subtitle">PhD Candidate in Theoretical Physics @ Perimeter Institute</div>
+                </div>
+                
+                <div class="braid-container">
+                    <svg class="braid-svg" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <path id="worldline-1" d="M 0 15 C 30 15, 30 45, 50 45 C 70 45, 70 15, 100 15" />
+                            <path id="worldline-2" d="M 0 45 C 30 45, 30 15, 50 15 C 70 15, 70 45, 100 45" />
+                        </defs>
+                        <use href="#worldline-1" class="strand strand-1" />
+                        <use href="#worldline-2" class="strand strand-2" />
+                        <circle class="particle p1" r="3">
+                            <animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.4;0.6;1" calcMode="linear">
+                                <mpath href="#worldline-1" />
+                            </animateMotion>
+                        </circle>
+                        <circle class="particle p2" r="3">
+                            <animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.4;0.6;1" calcMode="linear">
+                                <mpath href="#worldline-2" />
+                            </animateMotion>
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="research.html" class="active">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="notes.html">Notes</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="research-details">
+                <h2>Current Research Focus</h2>
+                
+                <h3>1. Formal Theory of Topological Orders</h3>
+                <p>My work involves classifying fractionalized phases of matter in (2+1)D and beyond. I utilize the framework of unitary modular tensor categories (UMTCs) to describe the algebraic structure of anyon fusion and braiding.</p>
+
+                <div class="divider-container">
+                    <svg class="pants-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="50" cy="20" rx="30" ry="10" class="manifold-edge"/>
+                        <ellipse cx="150" cy="20" rx="30" ry="10" class="manifold-edge"/>
+                        <ellipse cx="100" cy="90" rx="40" ry="10" class="manifold-edge-bottom"/>
+                        <path d="M 20 20 C 20 60, 60 90, 100 90 C 140 90, 180 60, 180 20" class="manifold-body"/>
+                        <path d="M 80 20 C 80 50, 120 50, 120 20" class="manifold-body saddle"/>
+                    </svg>
+                </div>
+
+                <h3>2. Topological Quantum Computation</h3>
+                <p>Investigating fault-tolerant logical gates through the lens of lattice models. I am particularly interested in the algebraic properties of the Toric Code and broader quantum double models $D(G)$.</p>
+                
+                <div class="math-hero">
+                   $$ A_v = \prod_{j \in \text{star}(v)} \sigma^x_j, \quad B_p = \prod_{j \in \text{boundary}(p)} \sigma^z_j $$
+                </div>
+
+                <h3>3. Categorical Quantum Mechanics</h3>
+                <p>Applying string diagrammatic calculus (graphical calculus) to simplify and formalize calculations in many-body physics and TQFT.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
