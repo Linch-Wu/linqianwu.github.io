@@ -1,4 +1,3 @@
-/* Import fonts: Fira Code for math/code aesthetics, Inter for readable prose */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;400;600&display=swap');
 
 :root {
@@ -6,6 +5,7 @@
     --text-color: #e5e7eb;
     --accent-color: #7dd3fc; /* Quantum blue */
     --accent-purple: #c084fc;
+    --accent-subtle: #1e293b;
     --font-main: 'Inter', sans-serif;
     --font-mono: 'Fira Code', monospace;
 }
@@ -27,27 +27,84 @@ body {
     width: 100%;
 }
 
+/* === Header & Braid Gadget Layout === */
 header {
     border-bottom: 1px solid #334155;
     padding-bottom: 2rem;
     margin-bottom: 3rem;
 }
 
-h1, h2, h3 {
-    font-family: var(--font-mono);
-    font-weight: 700;
+/* Flex container to put name and braid side-by-side */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 h1 {
+    font-family: var(--font-mono);
+    font-weight: 700;
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 0.5rem;
+    margin-top: 0;
 }
 
+.subtitle {
+    font-family: var(--font-mono);
+    color: #94a3b8;
+    font-size: 1rem;
+    max-width: 400px;
+}
+
+/* Braid Gadget Styling */
+.braid-container {
+    width: 120px;
+    height: 70px;
+    /* Subtle glow effect */
+    filter: drop-shadow(0 0 8px rgba(125, 211, 252, 0.2));
+}
+
+.braid-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.strand {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.strand-1 { stroke: var(--accent-color); }
+.strand-2 { stroke: var(--accent-purple); }
+
+.particle {
+    fill: var(--bg-color);
+    stroke-width: 2;
+}
+.p1 { stroke: var(--accent-color); animation: moveParticle1 6s infinite ease-in-out; }
+.p2 { stroke: var(--accent-purple); animation: moveParticle2 6s infinite ease-in-out; }
+
+/* Animations for the braiding particles moving along the paths */
+@keyframes moveParticle1 {
+    0%, 100% { cx: 0; cy: 15; }
+    50% { cx: 100; cy: 15; }
+}
+
+@keyframes moveParticle2 {
+    0%, 100% { cx: 0; cy: 45; }
+    50% { cx: 100; cy: 45; }
+}
+
+/* === General Typography & Layout === */
+
 h2 {
+    font-family: var(--font-mono);
+    font-weight: 700;
     font-size: 1.5rem;
     color: var(--accent-purple);
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
 }
@@ -56,12 +113,6 @@ h2::before {
     content: ">> ";
     color: #475569;
     margin-right: 10px;
-}
-
-.subtitle {
-    font-family: var(--font-mono);
-    color: #94a3b8;
-    font-size: 1rem;
 }
 
 a {
@@ -77,7 +128,7 @@ a:hover {
 }
 
 .nav-links {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     font-family: var(--font-mono);
     display: flex;
     gap: 1.5rem;
@@ -94,7 +145,6 @@ li {
     position: relative;
 }
 
-/* Using a tensor product symbol for bullet points */
 li::before {
     content: "⊗";
     position: absolute;
@@ -115,7 +165,7 @@ li::before {
 }
 
 .math-hero {
-    background: #1e293b;
+    background: var(--accent-subtle);
     padding: 1rem;
     border-radius: 8px;
     border-left: 4px solid var(--accent-color);
@@ -123,4 +173,42 @@ li::before {
     text-align: center;
     font-size: 1.2rem;
     overflow-x: auto;
+    /* Subtle math glow */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* === Pants Cobordism Divider === */
+.divider-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 1rem 0;
+    opacity: 0.4; /* Keep it subtle background decoration */
+}
+
+.pants-svg {
+    width: 100px;
+    height: 50px;
+}
+
+.manifold-edge {
+    fill: none;
+    stroke: var(--accent-color);
+    stroke-width: 1.5;
+}
+
+.manifold-edge-bottom {
+    fill: none;
+    stroke: var(--accent-purple);
+    stroke-width: 1.5;
+}
+
+.manifold-body {
+    fill: none;
+    stroke: #475569; /* Subtle grey for the bulk */
+    stroke-width: 1;
+    stroke-dasharray: 4 2; /* dashed lines for diagrammatic feel */
+}
+
+.saddle {
+     opacity: 0.6;
 }
