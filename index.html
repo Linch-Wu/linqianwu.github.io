@@ -4,67 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name | Theoretical Physics</title>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="script.js" defer></script>
     
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>[Your Name]</h1>
-            <div class="subtitle">PhD Candidate in Theoretical Physics @ Perimeter Institute</div>
+            <div class="header-content">
+                <div>
+                    <h1>[Your Name]</h1>
+                    <div class="subtitle">PhD Candidate in Theoretical Physics @ Perimeter Institute</div>
+                </div>
+                
+                <div class="braid-container">
+                    <svg class="braid-svg" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+                        <path class="strand strand-1" d="M 0 15 C 25 15, 25 45, 50 45 C 75 45, 75 15, 100 15" />
+                        <path class="strand strand-2" d="M 0 45 C 25 45, 25 15, 50 15 C 75 15, 75 45, 100 45" />
+                        <circle class="particle p1" cx="0" cy="15" r="3" />
+                        <circle class="particle p2" cx="0" cy="45" r="3" />
+                    </svg>
+                </div>
+            </div>
             
-            <div class="nav-links">
+            <nav class="nav-links">
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
                 <a href="#publications">Publications</a>
                 <a href="#notes">Notes</a>
-            </div>
+            </nav>
         </header>
 
         <section id="about">
             <p>I am a physicist working on the formal structures underlying topological phases of matter. My research focuses on using category theory and topological quantum field theory (TQFT) to understand topological orders and explore architectures for topological quantum computation.</p>
             
             <div class="math-hero">
-                $$ Z(\Sigma \times S^1) = \dim(\mathcal{H}_\Sigma) $$
+               $$ \mathcal{Z}(M^3) = \langle \text{vac} | \hat{H}_{TC} | \text{vac} \rangle $$
             </div>
         </section>
+
+        <div class="divider-container">
+            <svg class="pants-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="50" cy="20" rx="30" ry="10" class="manifold-edge"/>
+                <ellipse cx="150" cy="20" rx="30" ry="10" class="manifold-edge"/>
+                <ellipse cx="100" cy="90" rx="40" ry="10" class="manifold-edge-bottom"/>
+                <path d="M 20 20 C 20 60, 60 90, 100 90 C 140 90, 180 60, 180 20" class="manifold-body"/>
+                <path d="M 80 20 C 80 50, 120 50, 120 20" class="manifold-body saddle"/>
+            </svg>
+        </div>
 
         <section id="research">
             <h2>Research Interests</h2>
             <ul>
-                <li><strong>Topological Orders:</strong> Classifying fractionalized phases using tensor categories and anyon condensation.</li>
-                <li><strong>Category Theory:</strong> Applying monoidal categories and string diagrammatic calculus to physical systems.</li>
-                <li><strong>Topological Quantum Computation:</strong> Braid group representations, surface codes, and fault-tolerant logical gates. </li>
+                <li><strong>Topological Orders:</strong> Classifying fractionalized phases using tensor categories and anyon condensation in (2+1)D.</li>
+                <li><strong>Graphical Calculus:</strong> Applying string diagrams in monoidal categories to simplify calculations in quantum foundations and many-body physics.</li>
+                <li><strong>Topological Quantum Computation:</strong> Braid group representations, toric code architectures, and fault-tolerant logical gates.</li>
             </ul>
         </section>
+
+         <div class="divider-container">
+            <svg class="pants-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                 <ellipse cx="50" cy="20" rx="30" ry="10" class="manifold-edge"/>
+                 <ellipse cx="150" cy="20" rx="30" ry="10" class="manifold-edge"/>
+                 <ellipse cx="100" cy="90" rx="40" ry="10" class="manifold-edge-bottom"/>
+                 <path d="M 20 20 C 20 60, 60 90, 100 90 C 140 90, 180 60, 180 20" class="manifold-body"/>
+                 <path d="M 80 20 C 80 50, 120 50, 120 20" class="manifold-body saddle"/>
+            </svg>
+        </div>
 
         <section id="publications">
             <h2>Selected Publications</h2>
             <ul>
                 <li>
-                    <span class="paper-title"><a href="#">A Categorical Framework for Anyon Braiding</a></span>
-                    <span class="paper-authors">Your Name, Collaborator Name. <em>arXiv:2603.XXXXX</em> (2026)</span>
+                    <span class="paper-title"><a href="#">Graphical Calculus for Pivotal Categories</a></span>
+                    <span class="paper-authors">Your Name, Collaborator. <em>arXiv:2603.XXXXX</em> (2026)</span>
                 </li>
                 <li>
-                    <span class="paper-title"><a href="#">Pants Decompositions in 2+1D TQFTs</a></span>
-                    <span class="paper-authors">Your Name. <em>Journal of High Energy Physics</em> (2025)</span>
+                    <span class="paper-title"><a href="#">Ground State Degeneracy of the Toric Code on Higher Genus Surfaces</a></span>
+                    <span class="paper-authors">Your Name. <em>Journal of Mathematical Physics</em> (2025)</span>
                 </li>
             </ul>
         </section>
 
         <section id="notes">
             <h2>Talks & Notes</h2>
-            <p>I occasionally write up notes on formal theory and category theory. Here are a few recent ones:</p>
             <ul>
-                <li><a href="#">An Introduction to Modular Tensor Categories (PDF)</a></li>
-                <li><a href="#">String Diagrams for Physicists (Slides)</a></li>
+                <li><a href="#">Diagrammatic Algebra of Modular Tensor Categories (PDF)</a></li>
+                <li><a href="#">What is a TQFT anyway? (Slides)</a></li>
             </ul>
         </section>
     </div>
-
 </body>
 </html>
