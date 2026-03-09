@@ -292,31 +292,32 @@ li::before {
 
 /* === Donut/Mug Topology Demo Styles === */
 
-/* 1. Center the entire block */
+/* 1. Center the entire block (Background and side-border removed) */
 .topology-demo {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers items horizontally */
+    align-items: center; 
     justify-content: center;
-    margin: 3rem auto; /* Adds vertical spacing and centers the block itself */
+    margin: 3rem auto; 
     text-align: center;
     max-width: 500px;
 }
 
-/* 2. Fix the GIF background */
+/* 2. Fix the GIF background (Border removed) */
 .morph-gif {
     max-width: 250px;
     border-radius: 12px; 
     
-    /* 1. Invert(1) turns the white background black, and the dark donut bright cyan */
-    /* 2. Brightness and contrast make the new light color pop */
+    /* Invert(1) turns the white background black, and the dark donut bright cyan */
+    /* Brightness and contrast make the new light color pop */
     filter: invert(1) brightness(1.2) contrast(1.2);
     
-    /* 3. Screen mode makes the black background completely invisible */
+    /* Screen mode makes the black background completely invisible */
     mix-blend-mode: screen; 
     
     opacity: 0.9;
 }
+
 
 /* Styling for the caption text below it */
 .caption {
