@@ -288,3 +288,41 @@ li::before {
     margin-top: 1rem;
     text-align: center;
 }
+
+
+/* === Donut/Mug Topology Demo Styles === */
+
+/* 1. Center the entire block */
+.topology-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+    margin: 3rem auto; /* Adds vertical spacing and centers the block itself */
+    text-align: center;
+    max-width: 500px;
+}
+
+/* 2. Fix the GIF background */
+.morph-gif {
+    max-width: 250px;
+    border-radius: 12px; /* Gives it soft, modern corners */
+    
+    /* THE DARK MODE FIX: */
+    /* First, make it grayscale so there are no weird color artifacts */
+    filter: grayscale(100%) contrast(1.1);
+    /* Next, blend it so the white background disappears into your dark theme */
+    mix-blend-mode: multiply; 
+    
+    /* Optional: make it slightly translucent so it's not too distracting */
+    opacity: 0.85;
+    border: 2px solid var(--accent-subtle);
+}
+
+/* Styling for the caption text below it */
+.caption {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #94a3b8; /* A subtle gray */
+    margin-top: 1rem;
+}
