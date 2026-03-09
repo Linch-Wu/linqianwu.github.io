@@ -306,17 +306,16 @@ li::before {
 /* 2. Fix the GIF background */
 .morph-gif {
     max-width: 250px;
-    border-radius: 12px; /* Gives it soft, modern corners */
+    border-radius: 12px; 
     
-    /* THE DARK MODE FIX: */
-    /* First, make it grayscale so there are no weird color artifacts */
-    filter: grayscale(100%) contrast(1.1);
-    /* Next, blend it so the white background disappears into your dark theme */
-    mix-blend-mode: multiply; 
+    /* 1. Invert(1) turns the white background black, and the dark donut bright cyan */
+    /* 2. Brightness and contrast make the new light color pop */
+    filter: invert(1) brightness(1.2) contrast(1.2);
     
-    /* Optional: make it slightly translucent so it's not too distracting */
-    opacity: 0.85;
-    border: 2px solid var(--accent-subtle);
+    /* 3. Screen mode makes the black background completely invisible */
+    mix-blend-mode: screen; 
+    
+    opacity: 0.9;
 }
 
 /* Styling for the caption text below it */
