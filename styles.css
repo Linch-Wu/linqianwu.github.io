@@ -259,3 +259,32 @@ li::before {
     margin-top: 0.5rem;
     font-size: 0.95rem;
 }
+
+
+/* === Donut/Mug Deformation Styling === */
+.topology-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    padding: 1rem;
+    background: var(--accent-subtle);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-purple);
+}
+
+.morph-gif {
+    max-width: 250px;
+    border-radius: 4px;
+    /* This filter makes it look incredibly cool on a dark background */
+    filter: grayscale(100%) contrast(1.2) brightness(0.8);
+    mix-blend-mode: screen; 
+}
+
+.caption {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 1rem;
+    text-align: center;
+}
