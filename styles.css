@@ -292,7 +292,8 @@ li::before {
 
 /* === Donut/Mug Topology Demo Styles === */
 
-.topology-demo {
+/* 1. Center the entire block (Brand new class name to bust the cache!) */
+.donut-container {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -300,16 +301,19 @@ li::before {
     margin: 3rem auto; 
     text-align: center;
     max-width: 500px;
+    background: transparent; /* Forcing the background to be completely clear */
+    border: none; /* Forcing all borders to disappear */
 }
 
+/* 2. Fix the GIF background */
 .morph-gif {
     max-width: 250px;
     border-radius: 12px; 
     filter: invert(1) brightness(1.2) contrast(1.2);
     mix-blend-mode: screen; 
     opacity: 0.9;
+    border: none;
 }
-
 
 
 /* Styling for the caption text below it */
